@@ -1,0 +1,42 @@
+Version 2.14
+
+==================================================================================
+BATCH For WAB Upgrading (A_WAB_Upgrade_StaffDART.bat):
+STEP 1: Create new blank app with older WAB version, get app number (olderWABnumber). Stop WAB before continuing.
+STEP 2: Update VARIABLES in A_WAB_Upgrade_StaffDART.bat, run batch.
+STEP 3: Once batch is complete, start the new version of Web AppBuilder to check the result.
+==================================================================================
+
+MANUAL STEPS AFTER WAB UPGRADE:
+1. Copy folders \UpdateBatch & \WebMapJSON from production site to new app location (#3).  Update \UpdateBatch\*.txt (this file) and \UpdateBatch\*.bat as needed.
+
+2. In index.html add WAB version check section.
+
+3. Copy index.html to index_TEST.html and add widget test section.
+
+4. Download current Web Map (6971a49654b7419f916343c202e61827) json to \WebMapJSON folder using AGO Assistant (https://ago-assistant.esri.com/) as Data.json & Description.json.
+
+==================================================================================
+BATCH (\UpdateBatch\API_Update_StaffDART.bat):
+
+1. Update batch file with app's latest version location path (#5) and run. Watch for any errors.
+2. Run index_TEST.html before and after all custom widget updates.
+
+==================================================================================
+BATCH MESSAGES:
+GitHub Updates from github.com/mmurnaneGitHub:
+ 1. About Widget (WAB_About-Staff-DART-Widget), 2. Add CSV Widget (WAB_Add-CSV-Widget), 
+ 3. Add More Data (WAB_Add-More-Data-Grouped-Folder), 4. IdentifyMany Widget (WAB_IdentifyMany-Staff-DART-Widget), 
+ 5. StreetView Widget (WAB_StreetView-Staff-DART-Widget), 6. Theme Widget (WAB_MapTheme-Widget)
+
+3rd Party Widget Testing:
+ 1. AddData, 2. eDraw, 3. Measure, 4. SaveSession, 5. GeoCortex Analytics (set "visible": false in config.json) 
+==================================================================================
+
+https://cedd031d.tacoma.lcl:3344/webappbuilder/apps/38/
+ C:\arcgis-web-appbuilder-2.12\WebAppBuilderForArcGIS\server\apps\38
+
+Version 2.13: 
+ https://cedd031d.tacoma.lcl:3344/webappbuilder/apps/12/
+ C:\arcgis-web-appbuilder-2.13\WebAppBuilderForArcGIS\server\apps\12
+
